@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/all.min.css">
+  <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/js/all.min.js">
+  <link href="./dist/output.css" rel="stylesheet">
+  <title>To Do List</title>
+</head>
+<body>
+    <div class="flex justify-center items-center h-auto w-full pt-[45px] animFade">
+        <div class="bg-white p-8 rounded shadow-md md:w-[85%] sm:w-[96%] w-[98%] ">
+            <h1 class="text-2xl font-bold mb-4">To-Do List</h1>
+            <div class="mb-4 relative flex gap-3">
+              <div class="relative grow ">
+                <input id="task-input" type="text" class="border-2 h-12 p-2 w-full outline-[#5F33E1] shadow-[#5F33E1] border-[#5F33E1] " placeholder="Enter a new task">
+              <span class="cursor-pointer absolute right-2 top-2 bg-[#5F33E1] w-[30px] h-[30px] flex justify-center items-center  rounded-3xl">
+                <i id="add-task-btn" class="fa-solid fa-plus text-[21px] text-white">
+                </i>
+              </span>
+              </div>
+              <div class="">
+                <select id="task-color" class="border-2 rounded border-[#5F33E1] outline-[#5F33E1] shadow-[#5F33E1] font-semibold h-12 p-2 w-full">
+                  <option value="bg-white" selected>White</option>
+                  <option value="bg-red-200">Red</option>
+                  <option value="bg-yellow-200">Yellow</option>
+                  <option value="bg-green-200">Green</option>
+                </select>
+
+              </div>
+            </div>
+            
+            
+            <div class="mb-4">
+              <label for="filter" class="block text-sm font-medium text-gray-700">Filter Tasks</label>
+              <select id="filter" class="p-2 w-full border-2 border-[#5F33E1] outline-[#5F33E1] shadow-[#5F33E1] mt-2 ">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            
+            <ul id="task-list" class="list-disc mt-[35px]">
+              <!-- Tasks will be added here -->
+            </ul>
+          </div>
+    </div>
+    
+  <script src="./scripts/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
